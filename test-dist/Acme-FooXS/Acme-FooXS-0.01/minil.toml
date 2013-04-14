@@ -1,0 +1,6 @@
+
+name      = "Acme-FooXS"
+dist_name = "Acme::FooXS"
+
+[build]
+build_class = "Module::XSBuilder"
