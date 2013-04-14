@@ -9,3 +9,6 @@
 blib
 lib/Acme/FooXS.c
 MYMETA.*
+
+Acme-FooXS-*
+ppport.h

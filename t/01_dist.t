@@ -40,9 +40,9 @@ foreach my $dist (@dists) {
 
     my $guard = pushd("$tempdir/$dist");
 
-    is cmd_perl('Build.PL'),      0, 'perl Build.PL';
-    is cmd_perl('Build'),         0, './Build';
-    is cmd_perl('Build', 'test'), 0, './Build test';
+    is cmd_perl('Build.PL'),      0, 'perl Build.PL' or die;
+    is cmd_perl('Build'),         0, './Build' or die;
+    is cmd_perl('Build', 'test'), 0, './Build test' or die;
 }
 done_testing;
 

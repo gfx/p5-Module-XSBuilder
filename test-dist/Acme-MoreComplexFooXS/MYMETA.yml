@@ -1,0 +1,23 @@
+---
+abstract: "It's new $module"
+author:
+  - 'Fuji, Goro E<lt>g.psy.va@gmail.comE<gt>'
+build_requires:
+  ExtUtils::CBuilder: 0
+configure_requires:
+  Devel::PPPort: 3.20
+  Module::Build: 0.38
+  Module::XSBuilder: 0.01
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4004, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Acme-MoreComplexFooXS
+no_index:
+  directory:
+    - inc
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01
