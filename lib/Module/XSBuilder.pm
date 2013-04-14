@@ -35,6 +35,7 @@ sub new {
     $so_prefix =~ s/::\w+$//;
     $so_prefix =~ s{::}{/}g;
 
+    $args{c_source} = $xsbuilder_xs_src;
     $args{needs_compiler} = 1;
     $args{xs_files} = {
         map { $_ => "./$xs_build/" . $_ }
@@ -66,7 +67,7 @@ sub process_xs_files {
 
     # NOTE:
     # XS modules are consist of not only *.xs, but also *.c, *.xsi, and etc.
-    foreach my $from(glob "$xsbuilder_xs_src/*.{c,cpp,cxx,xsi,xsh}") {
+    foreach my $from(glob "$xsbuilder_xs_src/*.{xsi,xsh}") {
         my $to = "$xsbuilder_xs_build/$from";
         $self->add_to_cleanup($to);
         $self->copy_if_modified(from => $from, to => $to);
