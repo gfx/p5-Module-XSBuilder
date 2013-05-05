@@ -7,10 +7,10 @@ on 'test' => sub {
 };
 
 on 'configure' => sub {
-    requires 'Module::Build' => 0.38;
+    requires 'Module::Build', '>= 0.38';
 };
 
 on 'develop' => sub {
-    requires 'Minilla';
+    requires 'Minilla', '>= 0.3.2';
 };
 
